@@ -1,0 +1,325 @@
+'''
+#task1
+s=input('Metn daxil edin:')
+a=input('Simvol daxil edin:')
+k=0
+for i in s:
+    if i==a:
+        k+=1
+if k>0:
+    print('Yes')
+else:
+    print('No')
+'''
+'''
+#task2
+def f(s):
+    k=''
+    q=''
+    for i in s:
+        if i=="a":
+            i='b'
+        if i=='b':
+            i='a'
+        k=k+i
+    return k
+s=input('Setri daxil edin:')
+print(f(s))
+'''
+'''
+#task3
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!=' ':
+            word=word+i
+        else:
+            result=result+[word]
+            word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+def len(d):
+    k=0
+    for i in d:
+        k+=1
+    return k
+s=input('Setri daxil edin:')
+d=split(s)
+print('Tapilan sozlerin sayi:',len(d))
+'''
+'''
+#task4
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!=' ':
+            word=word+i
+        else:
+            result=result+[word]
+            word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+def len(i):
+    k=0
+    for j in i:
+        k=k+1
+    return k
+s=input('Setri daxil edin:')
+p=0
+d=0
+for i in split(s):
+    q=len(i)
+    if q>p:
+        p=q
+        h=d
+    d+=1
+print(split(s)[h],', uzunlugu:',p)
+'''
+'''
+#task5
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!=' ':
+            word=word+i
+        else:
+            result=result+[word]
+            word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+s=input('Soyad, ad və ata adinizi daxil edin:')
+print((split(s)[1])[0],'.',(split(s)[2])[0],'.',split(s)[0],sep="")
+'''
+'''
+#task6
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!='/':
+            word=word+i
+        else:
+            result=result+[word]
+            word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+s=input('Faylin unvanini daxil edin:')
+for i in split(s):
+    print(i)
+'''
+'''
+#task7
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!=' ':
+            word=word+i
+        else:
+            result=result+[word]
+            word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+s=input('Setri daxil edin:')
+a=input('Neyi evezleyirik:')
+b=input('Ne ile evezleyirik:')
+k=''
+for i in split(s):
+    if i==a:
+        i=b
+    k=k+i
+print(k)
+'''
+'''
+#task8
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!=' ':
+            word=word+i
+        else:
+            result=result+[word]
+            word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+def len(d):
+    len=0
+    for i in d:
+        len+=1
+    return len
+s=input('Input:')
+d=input('axtarilan soz:')
+q=0
+for i in split(s):
+    k=i[0:len(d)]
+    if k==d:
+        q+=1
+print(q)
+'''
+'''
+#task9
+def len(s):
+    len=0
+    for i in s:
+        len+=1
+    return len
+s=input('Input:')
+old_=input('enter old')
+new_=input('enter new')
+count=0
+i=0
+while i<len(s):
+'''
+'''
+#task11
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!=' ':
+            word=word+i
+        else:
+            result=result+[word]
+            word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+s=input('Input:')
+k=''
+for i in split(s):
+    i=i[0]+i[2:]
+    k=k+" "+i
+print(k)
+'''
+'''
+#task12
+def count(i):
+    k=0
+    for j in d:
+        if j==i:
+            k=1
+    return k
+def count_(p):
+    count=0
+    for j in p:
+        if i==j:
+            count=1
+    return count
+s=input('Setir:')
+d='AOUEbcmf3579!?,;'
+p=''
+for i in s:
+    if count(i)==1 and count_(p)==0:
+        p=p+i
+for i in p:
+    print("'"+i+"'",end=" ")
+'''
+'''
+#task13
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!='+':
+            word=word+i
+        else:
+            result=result+[word]
+            word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+s=input('Ifadeni daxil edin:')
+a=0
+for i in split(s):
+    a+=int(i)
+print(a)
+'''
+'''
+#task14
+def split(s):
+    result=[]
+    word=''
+    for i in s:
+        if i!='+' and i!='-':
+            word=word+i
+        else:
+            result=result+[word]
+            if i=='-':
+                word='-'
+            else:
+                word=''
+    if word!=" ":
+        result=result+[word]
+    return result
+s=input('Ifadeni daxil edin:')
+k=0
+for i in split(s):
+    k+=int(i)
+print(k)
+'''
+'''
+#task15
+s=input('Setri daxil edin:')
+q=''
+for i in s:
+    if i!=" ":
+        q=q+i
+    else:
+        break
+print('Birinci soz:',q)
+'''
+'''
+#task16
+def len(s):
+    k=0
+    for i in s:
+        k=k+1
+    return k
+def index(s):
+    q=0
+    for i in range(len(s)-1,-1,-1):
+        if s[i]=='.':
+            q=i
+            break
+    return q
+s=input('Faylin adini daxil edin:')
+a=input('Faylin yeni genislenmesini daxil edin:')
+if index(s)==0:
+    name=s
+else:
+    name=s[:index(s)]
+filename=name+'.'+a
+print(filename)
+'''
+'''
+#task17
+def len(s):
+    k=0
+    for i in s:
+        k=k+1
+    return k
+s=input('File Name:')
+a=0
+for i in s:
+    if i == "\\" or i == "/" or i == ":" or i == "*" or i == "?" or i == '"' or i == "<" or i == ">" or i == "|":
+        a=a+1
+if a==0 and len(s)<=10:
+    print('Fayl adi duzgundur')
+else:
+    print('Fayl adi duzgun deyil')
+'''
+
+
+
+
+
